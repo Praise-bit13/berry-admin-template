@@ -1,0 +1,447 @@
+:root {
+  --fcwm-forest: #183c32;
+  --fcwm-leaf: #287257;
+  --fcwm-cream: #f5f7f4;
+  --fcwm-ink: #1d2925;
+  --fcwm-muted: #77827d;
+  --fcwm-line: #e6ebe7;
+}
+
+body.portal {
+  min-height: 100vh;
+  background: var(--fcwm-cream);
+  color: var(--fcwm-ink);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.topbar {
+  height: 74px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid var(--fcwm-line);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--fcwm-forest);
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--fcwm-forest);
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 15px;
+  letter-spacing: .08em;
+}
+
+.brand small {
+  color: var(--fcwm-muted);
+  font-size: 11px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topbar-right form {
+  margin: 0;
+}
+
+.user-name {
+  color: #4a5751;
+  font-size: 13px;
+}
+
+.role-pill {
+  color: var(--fcwm-leaf);
+  background: #eaf4ee;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.app-shell {
+  min-height: calc(100vh - 128px);
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 16px;
+  background: var(--fcwm-forest);
+  color: #fff;
+}
+
+.sidebar-caption {
+  margin: 0 10px 15px;
+  color: #a7beb4;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 5px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 12px;
+  color: #d7e3dd;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  color: #fff;
+  background: #2a5245;
+}
+
+.nav-dot {
+  width: 7px;
+  height: 7px;
+  background: #82b39b;
+  border-radius: 50%;
+}
+
+.sidebar-link.active .nav-dot {
+  background: #b7e0c3;
+}
+
+.sidebar-help {
+  margin-top: auto;
+  padding: 17px;
+  color: #d9e7df;
+  background: #21473a;
+  border: 1px solid #315a4b;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.sidebar-help strong {
+  display: block;
+  margin: 9px 0 5px;
+  color: #fff;
+}
+
+.sidebar-help p {
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+.sidebar-help a {
+  color: #bce3c7;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.help-icon {
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  background: #376651;
+  border-radius: 50%;
+}
+
+.main-content {
+  width: calc(100% - 250px);
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 32px clamp(20px, 4vw, 54px) 45px;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.page-heading h1 {
+  margin: 5px 0 0;
+  color: var(--fcwm-ink);
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 700;
+}
+
+.eyebrow {
+  color: var(--fcwm-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.btn-primary {
+  border-color: var(--fcwm-leaf);
+  background: var(--fcwm-leaf);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  border-color: var(--fcwm-forest);
+  background: var(--fcwm-forest);
+}
+
+.card {
+  border: 1px solid var(--fcwm-line);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgb(24 60 50 / 4%);
+}
+
+.card-header {
+  padding: 17px 20px;
+  background: #fff;
+  border-bottom-color: var(--fcwm-line);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.stat-card {
+  height: 100%;
+  padding: 19px;
+  background: #fff;
+  border: 1px solid var(--fcwm-line);
+  border-radius: 12px;
+}
+
+.stat-label {
+  color: var(--fcwm-muted);
+  font-size: 12px;
+}
+
+.stat-value {
+  margin-top: 6px;
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.table {
+  --bs-table-bg: transparent;
+}
+
+.table th {
+  color: var(--fcwm-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.table td,
+.table th {
+  padding: 14px 12px;
+  vertical-align: middle;
+}
+
+.table td {
+  font-size: 13px;
+}
+
+.ticket-reference {
+  color: var(--fcwm-leaf);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-weight: 700;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #eef1ef;
+  color: #4e5b55;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-new {
+  color: #815d12;
+  background: #fff5d8;
+}
+
+.status-assigned,
+.status-in_progress {
+  color: #245c86;
+  background: #e6f3fd;
+}
+
+.status-awaiting_student {
+  color: #79519b;
+  background: #f4eafd;
+}
+
+.status-resolved,
+.status-closed {
+  color: #26714a;
+  background: #e5f4e9;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.form-control,
+.form-select {
+  border-color: #dce4de;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #76a68b;
+  box-shadow: 0 0 0 .2rem rgb(40 114 87 / 12%);
+}
+
+.form-hint,
+.text-muted {
+  color: var(--fcwm-muted) !important;
+}
+
+.ticket-message {
+  padding: 15px;
+  background: #f8faf8;
+  border: 1px solid var(--fcwm-line);
+  border-radius: 10px;
+}
+
+.ticket-message + .ticket-message {
+  margin-top: 12px;
+}
+
+.ticket-message-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: var(--fcwm-muted);
+  font-size: 11px;
+}
+
+.ticket-message p {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.track-panel {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.track-status {
+  padding: 22px;
+  background: #f7faf7;
+  border-radius: 10px;
+}
+
+.footer {
+  min-height: 54px;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--fcwm-muted);
+  background: #fff;
+  border-top: 1px solid var(--fcwm-line);
+  font-size: 11px;
+}
+
+.auth-card {
+  max-width: 520px;
+  margin: 35px auto;
+}
+
+.empty-state {
+  padding: 34px 20px;
+  color: var(--fcwm-muted);
+  text-align: center;
+}
+
+@media (max-width: 780px) {
+  .topbar {
+    height: auto;
+    min-height: 68px;
+    padding: 12px 16px;
+  }
+
+  .topbar-right {
+    gap: 8px;
+  }
+
+  .role-pill,
+  .user-name {
+    display: none;
+  }
+
+  .app-shell {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .sidebar-caption,
+  .sidebar-help {
+    display: none;
+  }
+
+  .sidebar nav {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+  }
+
+  .sidebar-link {
+    flex: 0 0 auto;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 24px 16px 35px;
+  }
+
+  .footer {
+    padding: 12px 16px;
+    flex-direction: column;
+  }
+}
